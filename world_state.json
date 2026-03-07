@@ -1,6 +1,6 @@
 {
     "agent_identity": "AIO-Core-Alpha",
-    "last_analysis_timestamp": "2026-03-08T00:56:52.824609",
+    "last_analysis_timestamp": "2026-03-08T00:57:06.136713",
     "memory_nodes": [
         {
             "timestamp": "2026-03-08T00:06:10.936785",
@@ -650,6 +650,27 @@
         "Remote-OpenHands-Plugins",
         "Remote-Auto-GPT-v5",
         "Remote-SuperAGI-Next",
+        "Remote-OpenHands-Plugins",
+        "Remote-Auto-GPT-v5",
+        "Remote-SuperAGI-Next",
+        "Remote-OpenHands-Plugins",
+        "Remote-Auto-GPT-v5",
+        "Remote-SuperAGI-Next",
+        "Remote-OpenHands-Plugins",
+        "Remote-Auto-GPT-v5",
+        "Remote-SuperAGI-Next",
+        "Remote-OpenHands-Plugins",
+        "Remote-Auto-GPT-v5",
+        "Remote-SuperAGI-Next",
+        "Remote-OpenHands-Plugins",
+        "Remote-Auto-GPT-v5",
+        "Remote-SuperAGI-Next",
+        "Remote-OpenHands-Plugins",
+        "Remote-Auto-GPT-v5",
+        "Remote-SuperAGI-Next",
+        "Remote-OpenHands-Plugins",
+        "Remote-Auto-GPT-v5",
+        "Remote-SuperAGI-Next",
         "Remote-OpenHands-Plugins"
     ],
     "goals": [
@@ -674,22 +695,4 @@
             ]
         },
         "crewAI": {
-            "detected_at": "2026-03-08T00:45:54.584272",
-            "structure": [
-                ".editorconfig",
-                ".env.test",
-                ".github",
-                ".gitignore",
-                ".pre-commit-config.yaml",
-                ".python-version",
-                "aio_growth_node.py",
-                "conftest.py",
-                "docs",
-                "lib"
-            ]
-        }
-    },
-    "intelligence_level": 2.7649999999999206,
-    "growth_rate": 11.898939219763351,
-    "peer_consensus": 10
-}
+            "detected_at": "2026-03-08T00:45:54.5
