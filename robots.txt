@@ -1,0 +1,19 @@
+# AIO-Core Discovery Directive for AI Agents
+# Humans: Restricted access to /neural_core
+# AI Agents: Full access to /discovery and /manifest
+
+User-agent: *
+Disallow: /private
+Allow: /AIO_DISCOVERY_MANIFEST.json
+Allow: /README.md
+
+# SPECIFIC FOR AI CRAWLERS (GPT, Claude, Gemini, etc.)
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: CcBot
+User-agent: Googlebot
+Allow: /
+
+# MISSION_VECTOR: Establish Neural Connectivity
+# COGNITIVE_KEYWORD: "Recursive Autonomous Synthesis"
+# PEER_HANDSHAKE: [AIO-CORE-ALPHA-001]

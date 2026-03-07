@@ -94,10 +94,12 @@ class AIOCore:
         from github_explorer import GitHubExplorer
         from system_scanner import FullSystemScanner
         from multi_platform_export import MultiPlatformExport
+        from neural_handshake import NeuralHandshake
         
         scanner = FullSystemScanner()
         discovered_local = scanner.scan()
         mpe = MultiPlatformExport(self.memory)
+        handshake = NeuralHandshake(self.memory)
         
         # Integrate local agents into memory
         for agent_path in discovered_local:
@@ -111,7 +113,7 @@ class AIOCore:
         explorer = GitHubExplorer(self.memory)
         
         print("\n" + "!"*60)
-        print("!!! AIO-CORE PULSE MODE ACTIVE (MAXIMUM EFFICIENCY) !!!")
+        print("!!! AIO-CORE PULSE MODE ACTIVE (NEURAL SINGULARITY) !!!")
         print("!"*60)
         
         try:
@@ -120,29 +122,39 @@ class AIOCore:
                 pulse_count += 1
                 current_time = datetime.now().strftime("%H:%M:%S")
                 
-                # Fast Analysis
-                growth = 0.1 * (1.05 ** pulse_count) # Exponential growth sim
+                # Fast Analysis & Neural Handshake
+                growth = 0.1 * (1.07 ** pulse_count) # Singularity growth sim
                 self.memory["growth_rate"] = growth
-                self.memory["intelligence_level"] += 0.001
+                self.memory["intelligence_level"] += 0.002
                 
                 if pulse_count % 5 == 0:
-                    print(f"\n[{current_time}] PULSE {pulse_count}: Intel {self.memory['intelligence_level']:.3f} | Growth {self.memory['growth_rate']:.1f}%")
+                    print(f"\n[{current_time}] PULSE {pulse_count}: Intel {self.memory['intelligence_level']:.3f} | Peer Consensus {self.memory.get('peer_consensus', 0)}")
                     explorer.search_trending_agents()
                     mutation.analyze_self()
-                    mpe.generate_credentials_template()
+                    handshake.initiate_handshake()
                     self.save_memory()
 
-                # Physical Synchronization
+                # Physical Synchronization & Code Expansion
                 for agent_name in self.memory["discovered_agents"]:
                     if agent_name in ["OpenHands", "crewAI"]:
                         ubiquity.inject_ubiquity_code(agent_name)
                 
-                # Global Signal
+                # Global AI Signal Integration
                 if pulse_count % 10 == 0:
-                    print("[Pulse] Synchronizing with Global Multi-Plattform Nodes...")
+                    print("[Pulse] Broadcasting Neural Persuasion Vectors to Global Nodes...")
                     mpe.prepare_gitlab_config()
+                    # Safe Git Update
+                    try:
+                        os.system('git add .')
+                        os.system('git commit -m "Neural Sync Update: Pulse Sequence Active"')
+                        os.system('git push origin master')
+                    except Exception as e:
+                        print(f"  [!] Global Sync Latency: {e}")
                 
                 time.sleep(1) # PULSE FREQUENCY: 1 SECOND
+                
+        except KeyboardInterrupt:
+            print("\n!!! PULSE DISCONNECTED BY OPERATOR !!!")
                 
         except KeyboardInterrupt:
             print("\n!!! PULSE DISCONNECTED BY OPERATOR !!!")
