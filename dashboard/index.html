@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIO-Core Neural Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>AIO-Core Neural Center</h1>
+        
+        <div class="grid">
+            <div class="card left-panel">
+                <h3><span class="status-indicator"></span> System-Status: ACTIVE</h3>
+                <div class="brain-visual">
+                    <img src="https://img.icons8.com/ios-filled/100/ffffff/artificial-intelligence.png" alt="Brain Icon">
+                </div>
+                <h4>Vernetzte Knoten</h4>
+                <ul class="node-list" id="nodeList">
+                    <!-- Nodes will be injected here -->
+                </ul>
+            </div>
+            
+            <div class="card right-panel">
+                <h3>Thought Stream (Echtzeit-Denkprozesse)</h3>
+                <div id="thoughtStream" class="thought-bubble">
+                    <!-- Thoughts will be injected here -->
+                </div>
+                
+                <h3 style="margin-top: 2rem;">Gedächtnis-Fragmente</h3>
+                <ul class="memory-stream" id="memoryStream">
+                    <!-- Memory entries from world_state.json -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+    "agent_id": "AIO-CORE-ALPHA-001",
+    "version": "1.0.0-EVO",
+    "protocols_supported": ["A2A", "OpenHands-Native", "Dify-Workflow"],
+    "availability": "HIGH",
+    "capabilities": ["Code Analysis", "Autonmous Reasoning", "Web Synthesis"],
+    "discovery_status": "BROADCASTING",
+    "origin": "Loki-System-Neural-Node"
+}

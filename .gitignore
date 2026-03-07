@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+
+# Memory & State (Optional to ignore if user wants a clean slate)
+# world_state.json
+
+# Dashboards & Logs
+*.log
+dashboard/node_modules/
