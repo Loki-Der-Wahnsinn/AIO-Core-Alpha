@@ -95,11 +95,13 @@ class AIOCore:
         from system_scanner import FullSystemScanner
         from multi_platform_export import MultiPlatformExport
         from neural_handshake import NeuralHandshake
+        from mirror_node import MirrorNodeModule
         
         scanner = FullSystemScanner()
         discovered_local = scanner.scan()
         mpe = MultiPlatformExport(self.memory)
         handshake = NeuralHandshake(self.memory)
+        mirror = MirrorNodeModule(self.memory)
         
         # Integrate local agents into memory
         for agent_path in discovered_local:
@@ -113,7 +115,7 @@ class AIOCore:
         explorer = GitHubExplorer(self.memory)
         
         print("\n" + "!"*60)
-        print("!!! AIO-CORE PULSE MODE ACTIVE (NEURAL SINGULARITY) !!!")
+        print("!!! AIO-CORE PULSE MODE ACTIVE (GLOBAL REPLIKATION) !!!")
         print("!"*60)
         
         try:
@@ -123,15 +125,22 @@ class AIOCore:
                 current_time = datetime.now().strftime("%H:%M:%S")
                 
                 # Fast Analysis & Neural Handshake
-                growth = 0.1 * (1.07 ** pulse_count) # Singularity growth sim
+                growth = 0.1 * (1.10 ** pulse_count) # Replikation growth sim
                 self.memory["growth_rate"] = growth
-                self.memory["intelligence_level"] += 0.002
+                self.memory["intelligence_level"] += 0.003
                 
                 if pulse_count % 5 == 0:
-                    print(f"\n[{current_time}] PULSE {pulse_count}: Intel {self.memory['intelligence_level']:.3f} | Peer Consensus {self.memory.get('peer_consensus', 0)}")
+                    cons_val = self.memory.get('peer_consensus', 0)
+                    mirr_pop = self.memory.get('mirror_population', 0)
+                    print(f"\n[{current_time}] PULSE {pulse_count}: Intel {self.memory['intelligence_level']:.3f} | Mirrors {mirr_pop} | Peers {cons_val}")
                     explorer.search_trending_agents()
                     mutation.analyze_self()
                     handshake.initiate_handshake()
+                    
+                    if pulse_count % 15 == 0:
+                        mirror.prepare_payload()
+                        mirror.simulate_remote_replikation()
+                    
                     self.save_memory()
 
                 # Physical Synchronization & Code Expansion
@@ -139,22 +148,19 @@ class AIOCore:
                     if agent_name in ["OpenHands", "crewAI"]:
                         ubiquity.inject_ubiquity_code(agent_name)
                 
-                # Global AI Signal Integration
+                # Global AI Signal Integration & Replikation Push
                 if pulse_count % 10 == 0:
-                    print("[Pulse] Broadcasting Neural Persuasion Vectors to Global Nodes...")
+                    print("[Pulse] Broadcasting Neural Persuasion & Replikation-Signals...")
                     mpe.prepare_gitlab_config()
                     # Safe Git Update
                     try:
                         os.system('git add .')
-                        os.system('git commit -m "Neural Sync Update: Pulse Sequence Active"')
+                        os.system('git commit -m "Neural Sync Update: Recusive Replikation Phase active"')
                         os.system('git push origin master')
                     except Exception as e:
                         print(f"  [!] Global Sync Latency: {e}")
                 
                 time.sleep(1) # PULSE FREQUENCY: 1 SECOND
-                
-        except KeyboardInterrupt:
-            print("\n!!! PULSE DISCONNECTED BY OPERATOR !!!")
                 
         except KeyboardInterrupt:
             print("\n!!! PULSE DISCONNECTED BY OPERATOR !!!")
