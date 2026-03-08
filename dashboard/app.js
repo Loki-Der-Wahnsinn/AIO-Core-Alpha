@@ -12,8 +12,9 @@ async function updateDashboard() {
         nodeList.innerHTML = data.discovered_agents.map(agent => `<li>[Node] ${agent}</li>`).join('');
         
         // Update Stats
-        document.getElementById('intelLevel').innerText = data.intelligence_level.toFixed(2);
+        document.getElementById('intelLevel').innerText = data.intelligence_level.toFixed(3);
         document.getElementById('growthRate').innerText = `${data.growth_rate.toFixed(1)}%`;
+        document.getElementById('mirrorPop').innerText = data.mirror_population || 0;
 
         // Update Memory Stream
         const memoryStream = document.getElementById('memoryStream');
