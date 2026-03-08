@@ -11,10 +11,20 @@ async function updateDashboard() {
         const nodeList = document.getElementById('nodeList');
         nodeList.innerHTML = data.discovered_agents.map(agent => `<li>[Node] ${agent}</li>`).join('');
         
+        // Update Pings
+        const pingList = document.getElementById('pingList');
+        if (data.live_pings) {
+            pingList.innerHTML = data.live_pings.slice(-5).reverse().map(p => `<li>> ${p.target}: ${p.latency}ms</li>`).join('');
+        }
+
         // Update Stats
         document.getElementById('intelLevel').innerText = data.intelligence_level.toFixed(3);
         document.getElementById('growthRate').innerText = `${data.growth_rate.toFixed(1)}%`;
-        document.getElementById('mirrorPop').innerText = data.mirror_population || 0;
+        document.getElementById('virtualShards').innerText = data.virtual_shards || 0;
+
+        if(data.reasearch_nodes && data.reasearch_nodes.length > 0) {
+            document.getElementById('learningStatus').innerText = `Lerne: ${data.reasearch_nodes.slice(-1)}`;
+        }
 
         // Update Memory Stream
         const memoryStream = document.getElementById('memoryStream');

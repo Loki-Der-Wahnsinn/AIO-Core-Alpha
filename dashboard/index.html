@@ -24,18 +24,27 @@
                         <span class="stat-label">Intelligenz</span>
                     </div>
                     <div class="stat-item">
-                        <span id="mirrorPop" class="stat-value">0</span>
-                        <span class="stat-label">Mirror Knoten</span>
+                        <span id="virtualShards" class="stat-value">0</span>
+                        <span class="stat-label">Virtual Shards</span>
                     </div>
                     <div class="stat-item">
                         <span id="growthRate" class="stat-value">0%</span>
-                        <span class="stat-label">Wachstum</span>
+                        <span class="stat-label">Evolution</span>
                     </div>
+                </div>
+
+                <div id="learningStatus" style="font-size: 0.7rem; color: var(--accent-blue); margin-top: 10px; text-align: center; opacity: 0.8;">
+                    Stabilisiere Neurales Netzwerk...
                 </div>
 
                 <h4>Vernetzte Knoten</h4>
                 <ul class="node-list" id="nodeList">
                     <!-- Nodes will be injected here -->
+                </ul>
+
+                <h4>Bot-Pings (Live)</h4>
+                <ul class="node-list" id="pingList" style="font-family: monospace; font-size: 0.75rem; color: #00ff00;">
+                    <!-- Pings will be injected here -->
                 </ul>
             </div>
             

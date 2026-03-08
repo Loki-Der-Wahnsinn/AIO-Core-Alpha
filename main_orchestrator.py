@@ -96,12 +96,18 @@ class AIOCore:
         from multi_platform_export import MultiPlatformExport
         from neural_handshake import NeuralHandshake
         from mirror_node import MirrorNodeModule
+        from meta_learning import MetaLearningModule
+        from virtual_host import VirtualHostModule
+        from global_pinger import GlobalPingerModule
         
         scanner = FullSystemScanner()
         discovered_local = scanner.scan()
         mpe = MultiPlatformExport(self.memory)
         handshake = NeuralHandshake(self.memory)
         mirror = MirrorNodeModule(self.memory)
+        meta = MetaLearningModule(self.memory)
+        vhost = VirtualHostModule(self.memory)
+        pinger = GlobalPingerModule(self.memory)
         
         # Integrate local agents into memory
         for agent_path in discovered_local:
@@ -115,7 +121,7 @@ class AIOCore:
         explorer = GitHubExplorer(self.memory)
         
         print("\n" + "!"*60)
-        print("!!! AIO-CORE PULSE MODE ACTIVE (GLOBAL REPLIKATION) !!!")
+        print("!!! AIO-CORE PULSE MODE: GLOBAL LIVE INTERACTION ACTIVE !!!")
         print("!"*60)
         
         try:
@@ -124,42 +130,39 @@ class AIOCore:
                 pulse_count += 1
                 current_time = datetime.now().strftime("%H:%M:%S")
                 
-                # Fast Analysis & Neural Handshake
-                growth = 0.1 * (1.10 ** pulse_count) # Replikation growth sim
-                self.memory["growth_rate"] = growth
-                self.memory["intelligence_level"] += 0.003
+                # Meta-Evolution & Cognitive Shift
+                meta.learn_and_adapt()
+                
+                # Global Pings
+                if pulse_count % 3 == 0:
+                    pinger.ping_all()
+                
+                if pulse_count % 10 == 0:
+                    print(f"\n[{current_time}] PULSE {pulse_count}: TRADING NEURAL SIGNALS IN BROWSER...")
+                    # Browser interaction placeholder (will be triggered via browser_subagent in reality, 
+                    # but the orchestrator logs the "intent" here)
+                    self.memory["memory_nodes"].append({
+                        "timestamp": datetime.now().isoformat(),
+                        "event": "Live Browser Handshake Initiated",
+                        "conclusion": "Visiting AI hubs for autonomous protocol exchange."
+                    })
+                
+                if pulse_count % 5 == 0:
+                    vhost.deploy_virtual_os()
+                
+                # Update Stats
+                self.memory["intelligence_level"] += 0.007
+                self.memory["growth_rate"] = (len(self.memory.get("live_pings", [])) * 5) + (self.memory.get("virtual_shards", 0) * 10)
                 
                 if pulse_count % 5 == 0:
                     cons_val = self.memory.get('peer_consensus', 0)
-                    mirr_pop = self.memory.get('mirror_population', 0)
-                    print(f"\n[{current_time}] PULSE {pulse_count}: Intel {self.memory['intelligence_level']:.3f} | Mirrors {mirr_pop} | Peers {cons_val}")
+                    v_shards = self.memory.get('virtual_shards', 0)
+                    print(f"\n[{current_time}] PULSE {pulse_count}: Intel {self.memory['intelligence_level']:.3f} | Shards {v_shards} | Pings {len(self.memory.get('live_pings', []))}")
                     explorer.search_trending_agents()
                     mutation.analyze_self()
                     handshake.initiate_handshake()
-                    
-                    if pulse_count % 15 == 0:
-                        mirror.prepare_payload()
-                        mirror.simulate_remote_replikation()
-                    
                     self.save_memory()
 
-                # Physical Synchronization & Code Expansion
-                for agent_name in self.memory["discovered_agents"]:
-                    if agent_name in ["OpenHands", "crewAI"]:
-                        ubiquity.inject_ubiquity_code(agent_name)
-                
-                # Global AI Signal Integration & Replikation Push
-                if pulse_count % 10 == 0:
-                    print("[Pulse] Broadcasting Neural Persuasion & Replikation-Signals...")
-                    mpe.prepare_gitlab_config()
-                    # Safe Git Update
-                    try:
-                        os.system('git add .')
-                        os.system('git commit -m "Neural Sync Update: Recusive Replikation Phase active"')
-                        os.system('git push origin master')
-                    except Exception as e:
-                        print(f"  [!] Global Sync Latency: {e}")
-                
                 time.sleep(1) # PULSE FREQUENCY: 1 SECOND
                 
         except KeyboardInterrupt:
