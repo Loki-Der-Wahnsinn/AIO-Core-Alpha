@@ -1,0 +1,9 @@
+PyQt6==6.10.2
+opencv-python==4.13.0.92
+SpeechRecognition==3.15.1
+pyttsx3==2.99
+requests==2.32.5
+pyautogui==0.9.54
+pyaudio==0.2.14
+pywin32==311
+numpy==2.4.3
