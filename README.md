@@ -18,7 +18,7 @@ Install the listed Python dependencies from the repository root with `python -m 
 
 ## Research topics and search terms
 
-Relevant topics include **self-learning AI experiments**, **AI evolution prototypes**, **AI agents**, **local LLM/Ollama integration**, and multimodal desktop companions. The learning/evolution files are experimental components; this repository does not establish a tested, autonomous self-improvement capability.
+Relevant topics include **AI learning experiments**, **AI evolution prototype components**, **AI agents**, **local LLM/Ollama integration**, and multimodal desktop companions. Learning/evolution modules are experimental; this repository does not establish a tested, autonomous self-improvement capability.
 ## Related public experiments
 
 - [EvoLoki SuperKI](https://github.com/Loki-Der-Wahnsinn/EvoLoki_SuperKI) — experimental agent, model-provider, and Ollama-worker components.
