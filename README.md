@@ -23,6 +23,8 @@ Relevant topics include **AI learning experiments**, **AI evolution prototype co
 
 A separate, private AI-orchestration project has a curated [public overview](https://github.com/Loki-Der-Wahnsinn/EvoLoki_SuperKI/blob/main/FENRIR_ALPHA_OVERVIEW.md) and a concise [shared context for AI and human contributors](https://github.com/Loki-Der-Wahnsinn/EvoLoki_SuperKI/blob/main/FENRIR_PUBLIC_CONTEXT.md). The implementation and operational data remain private.
 
+**Project history:** AIO-Core-Alpha is an earlier, standalone experimental precursor associated with Fenrir-Alpha’s broader project history. It differs substantially from the current Fenrir system; this prototype’s code and behavior do not describe Fenrir today. The private live system may be ahead of this public repository, and no current runtime details are published here.
+
 ## Related public experiments
 
 - [EvoLoki SuperKI](https://github.com/Loki-Der-Wahnsinn/EvoLoki_SuperKI) — experimental agent, model-provider, and Ollama-worker components.
