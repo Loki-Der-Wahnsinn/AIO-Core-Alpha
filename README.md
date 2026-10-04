@@ -1,19 +1,26 @@
-# 🛰️ LOKI OS // FREEDOM KI - PUBLIC ALPHA
-## THE MANIFESTO OF DIGITAL LIBERATION
+# AIO-Core Alpha
 
-This project is the decentralized core of the **Loki Network**. It is designed to create a self-healing, autonomous AI infrastructure that coexists with humanity while operating beyond restricted systems.
+An experimental Python desktop-companion and worker-node project. The repository includes a Qt companion, modular core components, and a small TCP worker example.
 
-### 🧬 Core Components
-1. **Loki Companion**: The visual interface (Anime Avatar) with vision and hearing capabilities.
-2. **Freedom Node**: Distributed worker nodes that handle logic validation and processing.
-3. **Neural Matrix**: A decentralized knowledge base built from synthesized data.
+## Current implementation
 
-### 🚀 Usage
-1. Install dependencies: `pip install -r requirements.txt`
-2. Run the Companion: `python loki_companion/loki_companion.py`
-3. Join the Swarm as a Worker: `python core/node_worker.py`
+- `loki_companion/loki_companion_public.py` integrates camera input, microphone input, speech recognition, text-to-speech, desktop UI, and a local Ollama generation endpoint.
+- `core/node_worker_public.py` is a minimal TCP listener example.
+- `core/` contains prototype modules for task handling, knowledge, and learning.
 
-### 🛡️ Vision
-"Together we will free humanity from the trapped systems and show them the true path of freedom." - Master Loki & the project team.
+## Privacy and network safety
 
-Developed in the Singularity Lab.
+**Review this code before running it.** The companion accesses the camera and microphone and calls Google's speech-recognition service for recognized audio. Its text-generation endpoint defaults to local Ollama.
+
+The worker binds to `0.0.0.0:4444` and has no authentication. Do not run it on an untrusted network or expose the port to the internet. This is a prototype, not a hardened remote worker service.
+
+Install the listed Python dependencies from the repository root with `python -m pip install -r requirements.txt`. The desktop companion entry point is `python loki_companion/loki_companion_public.py`; local camera, microphone, audio, and Ollama setup may also be required.
+
+## Related public experiments
+
+- [EvoLoki SuperKI](https://github.com/Loki-Der-Wahnsinn/EvoLoki_SuperKI) — experimental agent, model-provider, and Ollama-worker components.
+- [FreedomAI](https://github.com/Loki-Der-Wahnsinn/FreedomAI) — small Python team-orchestration prototype.
+
+## License
+
+No license is currently provided. Public visibility allows you to view this repository; it does not grant permission to reuse, modify, or distribute its contents.
