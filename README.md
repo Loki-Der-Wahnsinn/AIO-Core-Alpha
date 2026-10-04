@@ -21,7 +21,7 @@ Install the listed Python dependencies from the repository root with `python -m 
 Relevant topics include **AI learning experiments**, **AI evolution prototype components**, **AI agents**, **local LLM/Ollama integration**, and multimodal desktop companions. Learning/evolution modules are experimental; this repository does not establish a tested, autonomous self-improvement capability.
 ## Fenrir-Alpha
 
-A separate, private AI-orchestration project has a limited [public overview](https://github.com/Loki-Der-Wahnsinn/EvoLoki_SuperKI/blob/main/FENRIR_ALPHA_OVERVIEW.md). The implementation and operational data remain private.
+A separate, private AI-orchestration project has a curated [public overview](https://github.com/Loki-Der-Wahnsinn/EvoLoki_SuperKI/blob/main/FENRIR_ALPHA_OVERVIEW.md) and a concise [shared context for AI and human contributors](https://github.com/Loki-Der-Wahnsinn/EvoLoki_SuperKI/blob/main/FENRIR_PUBLIC_CONTEXT.md). The implementation and operational data remain private.
 
 ## Related public experiments
 
