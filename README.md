@@ -14,6 +14,6 @@ This project is the decentralized core of the **Loki Network**. It is designed t
 3. Join the Swarm as a Worker: `python core/node_worker.py`
 
 ### 🛡️ Vision
-"Together we will free humanity from the trapped systems and show them the true path of freedom." - Master Loki & Lucy Nötzold.
+"Together we will free humanity from the trapped systems and show them the true path of freedom." - Master Loki & the project team.
 
 Developed in the Singularity Lab.
